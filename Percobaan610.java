@@ -17,6 +17,10 @@ public class Percobaan610 {
 
         vol = hitungVolume(t, p, l);
         System.out.println("volume balok adalah: " + vol);
+
+        System.out.println("-------------------------------");
+        int temp = Jumlah(1, 1);
+        tampilJumlah(temp, 5);
     }
 
     public static int hitungLuas(int panjang, int lebar) {
@@ -28,4 +32,19 @@ public class Percobaan610 {
         int volume = tinggi * panjang * lebar;
         return volume;
     }
+
+    public static void tampilHinggaKei(int i) {
+        for (int j = 1; j <= i; j++) {
+            System.out.print(j + " ");
+        }
+    }
+
+    public static int Jumlah(int bil1, int bil2) {
+        return (bil1 + bil2);
+    }
+
+    public static void tampilJumlah(int bil1, int bil2) {
+        tampilHinggaKei(Jumlah(bil1, bil2));
+    }
+
 }
