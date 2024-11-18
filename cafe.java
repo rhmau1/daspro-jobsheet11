@@ -1,11 +1,20 @@
 import java.util.Scanner;
 
 public class cafe {
-    static int arr[][] = new int[5][7];
-    static String menu[] = { "Kopi", "teh", "es degan", "roti bakar", "gorengan" };
+    static int arr[][];
+    static String menu[];
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("masukkan jumlah menu: ");
+        int jmlMenu = sc.nextInt();
+        sc.nextLine();
+        arr = new int[jmlMenu][7];
+        menu = new String[jmlMenu];
+        for (int i = 0; i < jmlMenu; i++) {
+            System.out.print("masukkan nama menu ke-" + (i + 1) + ": ");
+            menu[i] = sc.nextLine();
+        }
         input(sc);
         tampilSeluruhDataPenjualan();
         mencariMenuTertinggi();
