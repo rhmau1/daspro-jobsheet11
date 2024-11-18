@@ -12,10 +12,20 @@ public class Percobaan610 {
         System.out.println("masukkan tinggi: ");
         t = sc.nextInt();
 
-        L = p * l;
+        L = hitungLuas(p, l);
         System.out.println("luas persegi panjang adalah: " + L);
 
-        vol = p * l * t;
+        vol = hitungVolume(t, p, l);
         System.out.println("volume balok adalah: " + vol);
+    }
+
+    public static int hitungLuas(int panjang, int lebar) {
+        int luas = panjang * lebar;
+        return luas;
+    }
+
+    public static int hitungVolume(int tinggi, int panjang, int lebar) {
+        int volume = tinggi * panjang * lebar;
+        return volume;
     }
 }
